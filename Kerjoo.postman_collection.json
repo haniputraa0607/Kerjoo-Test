@@ -26,7 +26,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\" : \"hauck.kim@example.net\",\n    \"password\" : \"password\"\n}",
+					"raw": "{\n    \"email\" : \"unittest@email.com\",\n    \"password\" : \"password\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -74,13 +74,34 @@
 				"method": "POST",
 				"header": [],
 				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"email\" : \"hauck.kim@example.net\",\n    \"password\" : \"password\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "date[]",
+							"value": "2024-01-25",
+							"type": "text"
+						},
+						{
+							"key": "date[]",
+							"value": "2024-01-26",
+							"type": "text"
+						},
+						{
+							"key": "purpose",
+							"value": "Cuti Tahunan",
+							"type": "text"
+						},
+						{
+							"key": "notes",
+							"value": "tes",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
 						}
-					}
+					]
 				},
 				"url": {
 					"raw": "{{api}}/api/annual-leaves",
